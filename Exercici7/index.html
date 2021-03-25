@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Script validació dades formularis-->
+    <script src="funciones.js" type="text/javascript"></script> 
+</head>
+<body>
+    <script>
+        let num1, num2, num1int, num2int;
+
+num1 = prompt("Introduzca el primer número del 1 al 10:");
+num2 = prompt("Introduzca el segundo número del 1 al 10:");
+
+num1int = parseInt(num1);
+num2int = parseInt(num2);
+
+document.write(`<h2>Tabla de multiplicar del ${num1int} hasta el ${num2int} </h2>`);
+
+document.write("<ul>");
+
+for(let i=1;i<=num2int;i++)
+{
+        let multi = num1int * i;
+        document.write("<li>");
+		document.write(`${num1int} x ${i} = ${multi}`);
+		document.write("</li>");
+}
+
+document.write("</ul>");
+    </script>
+</body>
+</html>
